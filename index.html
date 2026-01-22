@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francesco & Chiara - Matrimonio 9 Settembre 2026</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Password protection -->
+    <div id="password-overlay" class="overlay">
+        <div class="password-box">
+            <h2>Inserisci password invito</h2>
+            <input type="password" id="pass-input" placeholder="Password...">
+            <button onclick="checkPassword()">Entra</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <h1 class="names">Francesco e Chiara</h1>
+        <img src="images/frachia.jpg" alt="Francesco e Chiara" class="hero-photo">
+    </header>
+
+    <!-- Invito -->
+<section class="invito">
+    <h2>Il nostro invito a nozze</h2>
+    <p>Siamo lieti di inviarvi al nostro matrimonio</p>
+    <div class="data-grande">
+        <p class="data-main">Ci sposiamo il</p>
+        <p class="data-evidenza">9 SETTEMBRE 2026</p>
+    </div>
+    <div id="countdown-container">
+        <div id="countdown">Caricamento...</div>
+    </div>
+    <p class="frase-effetto">"Vi aspettiamo per il nostro matrimonio, l'evento più importante della nostra vita"</p>
+</section>
+
+    <!-- Chiesa -->
+    <section class="luogo">
+        <h2>La Chiesa</h2>
+        <img src="images/chiesaMadre.jpg" alt="Chiesa">
+        <p><strong>Ore:</strong> 16:00</p> <!-- Cambia orario -->
+        <p><strong>Indirizzo:</strong> Via Chiesa 123, Catania [web:1]</p>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3146.105!2d15.2196319!3d37.2299357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1313c5a079e76727%3A0xaf90d38b91478a3b!2sDuomo%20di%20Augusta!5e0!3m2!1sit!2sit!4v1737560000000!5m2!1sit!2sit" 
+            class="map" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+    <!-- Ricevimento -->
+<section class="luogo">
+    <h2>Locale Ricevimento</h2>
+    <img src="images/locale.png" alt="Capo Campolato Brucoli">
+    <p><strong>Indirizzo:</strong> Capo Campolato Hotel & Banqueting, Contrada Campolato, 96011 Brucoli SR</p>
+    <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3159.845!2d15.21523!3d37.23782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13132f5a5f8b2d3f%3A0xabcdef1234567890!2sContrada%20Campolato%2C%2096011%20Brucoli%20SR!5e0!3m2!1sit!2sit!4v1737563200000!5m2!1sit!2sit" 
+    class="map" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+</section>
+
+    <!-- IBAN -->
+    <section class="iban-section">
+        <h2>Ringraziamenti e Pensiero</h2>
+        <p>Grazie per essere parte della nostra gioia!</p>
+        <div class="iban-box">
+            <p><strong>IBAN per pensiero:</strong> IT60X0542811101000000123456</p> <!-- Il tuo IBAN -->
+            <small>Opzionale, per chi vuole contribuire</small>
+        </div>
+    </section>
+
+    <footer>
+        <p>Grazie da Francesco e Chiara ❤️</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
