@@ -1,339 +1,273 @@
 :root {
-    --primary-gold: #EBC17C;       /* Oro caldo principale */
-    --champagne-bg: #F7E6CA;       /* Crema champagne */
-    --white-pure: #FFFFFF;         /* Bianco puro */
-    --neutral-light: #FAF7F0;      /* Off-white */
-    --shadow-gold: rgba(235,193,124,0.4);
-    --dark-gold: #B8945F;          /* Testo scuro oro */
-    --text-dark: #5A4F47;          /* Testo principale */
+  --primary-gold: #EBC17C;
+  --champagne-bg: #F7E6CA;
+  --white-pure: #FFFFFF;
+  --neutral-light: #FAF7F0;
+  --shadow-gold: rgba(235,193,124,0.35);
+  --dark-gold: #B8945F;
+  --text-dark: #5A4F47;
+
+  /* Countdown dark (stile digitale) */
+  --cd-bg: #0f1418;
+  --cd-card: #1a2127;
+  --cd-card-top: #202a31;
+  --cd-line: rgba(255,255,255,0.10);
+  --cd-text: #f3f6f8;
+  --cd-muted: rgba(243,246,248,0.75);
+  --cd-shadow: rgba(0,0,0,0.45);
 }
 
 * { box-sizing: border-box; }
 
 body {
-    font-family: 'Dancing Script', cursive;
-    text-align: center;
-    background: linear-gradient(to bottom, var(--champagne-bg), var(--neutral-light));
-    margin: 0;
-    padding: 20px;
-    color: var(--text-dark);
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+  background: linear-gradient(to bottom, var(--champagne-bg), var(--neutral-light));
+  margin: 0;
+  padding: 20px;
+  color: var(--text-dark);
 }
 
 /* Header */
 .names {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 2.5em;
-    color: var(--primary-gold);
-    margin: 0;
-    text-shadow: 1px 1px 3px var(--shadow-gold);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2.5em;
+  color: var(--primary-gold);
+  margin: 0;
+  text-shadow: 1px 1px 3px var(--shadow-gold);
 }
 
 .hero-photo {
-    width: 350px;
-    height: 350px;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    object-position: center center;
-    border-radius: 50%;
-    border: 8px solid var(--primary-gold);
-    box-shadow: 0 20px 45px var(--shadow-gold);
-    margin: 120px auto 40px;
-    display: block;
+  width: 350px;
+  height: 350px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 50%;
+  border: 8px solid var(--primary-gold);
+  box-shadow: 0 20px 45px var(--shadow-gold);
+  margin: 120px auto 40px;
+  display: block;
 }
 
 /* Sections */
 section {
-    margin: 50px auto;
-    padding: 40px;
-    background: var(--white-pure);
-    border-radius: 25px;
-    box-shadow: 0 10px 30px var(--shadow-gold);
-    max-width: 800px;
-    border-left: 6px solid var(--primary-gold);
+  margin: 50px auto;
+  padding: 40px;
+  background: var(--white-pure);
+  border-radius: 25px;
+  box-shadow: 0 10px 30px var(--shadow-gold);
+  max-width: 800px;
+  border-left: 6px solid var(--primary-gold);
 }
 
 h1, h2 {
-    color: var(--primary-gold);
-    font-weight: 700;
+  color: var(--primary-gold);
+  font-weight: 700;
 }
 
 .invito {
-    max-width: 95vw;
-    padding: 30px 20px;
-    margin: 0 auto;
-    overflow-wrap: break-word;
+  max-width: 95vw;
+  padding: 30px 20px;
+  margin: 0 auto;
+  overflow-wrap: break-word;
 }
 
 /* Frase */
 .frase-effetto {
-    font-size: 1.8em;
-    color: var(--text-dark);
-    background: var(--champagne-bg);
-    padding: 25px;
-    border-radius: 20px;
-    margin: 25px 0;
-    box-shadow: inset 0 3px 15px rgba(247,230,202,0.4);
+  font-size: 1.8em;
+  color: var(--text-dark);
+  background: var(--champagne-bg);
+  padding: 25px;
+  border-radius: 20px;
+  margin: 25px 0;
+  box-shadow: inset 0 3px 15px rgba(247,230,202,0.4);
 }
 
 /* Data grande */
 .data-grande { margin: 30px 0; }
 
 .data-main {
-    font-size: 1.4em;
-    margin: 0 0 10px 0;
-    color: var(--text-dark);
+  font-size: 1.4em;
+  margin: 0 0 10px 0;
+  color: var(--text-dark);
 }
 
 .data-evidenza {
-    font-size: clamp(2.2em, 7.5vw, 4.5em);
-    font-weight: 700;
-    color: var(--primary-gold);
-    margin: 0;
-    text-shadow: 2px 2px 4px var(--shadow-gold);
-    letter-spacing: 2px;
-    line-height: 1.1;
-    max-width: 90vw;
+  font-size: clamp(2.2em, 7.5vw, 4.5em);
+  font-weight: 700;
+  color: var(--primary-gold);
+  margin: 0;
+  text-shadow: 2px 2px 4px var(--shadow-gold);
+  letter-spacing: 2px;
+  line-height: 1.1;
+  max-width: 90vw;
 }
 
 /* Map + immagini luoghi */
 .map {
-    width: 100%;
-    height: 350px;
-    border: 4px solid var(--champagne-bg);
-    border-radius: 15px;
-    margin-top: 20px;
-    box-shadow: 0 5px 20px var(--shadow-gold);
+  width: 100%;
+  height: 350px;
+  border: 4px solid var(--champagne-bg);
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 0 5px 20px var(--shadow-gold);
 }
 
 .luogo img {
-    width: 100%;
-    max-width: 400px;
-    height: 250px;
-    object-fit: cover;
-    object-position: top;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px var(--shadow-gold);
-    margin: 20px auto;
-    display: block;
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px var(--shadow-gold);
+  margin: 20px auto;
+  display: block;
 }
 
 /* IBAN */
 .iban-box {
-    background: linear-gradient(135deg, var(--champagne-bg), var(--neutral-light));
-    padding: 30px;
-    border-radius: 20px;
-    border-left: 6px solid var(--primary-gold);
-    box-shadow: inset 0 3px 15px rgba(247,230,202,0.5);
+  background: linear-gradient(135deg, var(--champagne-bg), var(--neutral-light));
+  padding: 30px;
+  border-radius: 20px;
+  border-left: 6px solid var(--primary-gold);
+  box-shadow: inset 0 3px 15px rgba(247,230,202,0.5);
 }
-
 .iban-box strong { color: var(--primary-gold); }
 
 /* Footer */
 footer {
-    margin-top: 70px;
-    padding: 40px;
-    color: var(--primary-gold);
-    font-size: 1.6em;
-    background: var(--champagne-bg);
-    border-radius: 20px;
-    box-shadow: 0 -5px 20px var(--shadow-gold);
+  margin-top: 70px;
+  padding: 40px;
+  color: var(--primary-gold);
+  font-size: 1.6em;
+  background: var(--champagne-bg);
+  border-radius: 20px;
+  box-shadow: 0 -5px 20px var(--shadow-gold);
 }
 
-/* Overlay password */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(235,193,124,0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.password-box {
-    background: var(--white-pure);
-    padding: 50px;
-    border-radius: 30px;
-    text-align: center;
-    box-shadow: 0 25px 60px var(--shadow-gold);
-    border: 4px solid var(--primary-gold);
-}
-
-#pass-input {
-    padding: 18px;
-    font-size: 1.4em;
-    margin: 20px;
-    border-radius: 12px;
-    border: 3px solid var(--champagne-bg);
-    background: var(--neutral-light);
-    width: 280px;
-    font-family: inherit;
-}
-
+/* Bottoni generici */
 button {
-    padding: 18px 45px;
-    background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
-    color: var(--white-pure);
-    border: none;
-    border-radius: 12px;
-    font-size: 1.3em;
-    cursor: pointer;
-    box-shadow: 0 8px 25px var(--shadow-gold);
-    transition: all 0.3s ease;
-    font-family: inherit;
+  padding: 18px 45px;
+  background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+  color: var(--white-pure);
+  border: none;
+  border-radius: 12px;
+  font-size: 1.3em;
+  cursor: pointer;
+  box-shadow: 0 8px 25px var(--shadow-gold);
+  transition: all 0.3s ease;
+  font-family: inherit;
 }
-
 button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 35px var(--shadow-gold);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px var(--shadow-gold);
 }
 
-/* ========== FLIP CLOCK (ELECTRONIC) ========== */
-/* HTML atteso: vedi JS (usa .flip-clock, .flip-group, .flip-sep, .flip-digit) */
+/* ===================== */
+/* COUNTDOWN DIGITALE DARK */
+/* ===================== */
 
-.flip-clock {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 10px;
-    margin: 30px auto 10px;
-    flex-wrap: wrap;
+.countdown-dark {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 26px;
+  margin: 28px auto 8px;
+  flex-wrap: wrap;
 }
 
-.flip-group {
-    display: flex;
-    align-items: flex-end;
-    gap: 6px;
-    padding: 14px 14px 10px;
-    border-radius: 18px;
-    background: linear-gradient(135deg, var(--white-pure), var(--neutral-light));
-    box-shadow: 0 12px 30px var(--shadow-gold);
+.cd-unit {
+  text-align: center;
+  min-width: 120px;
 }
 
-.flip-label {
-    width: 100%;
-    text-align: center;
-    margin-top: 8px;
-    font-family: 'Courier New', monospace;
-    font-size: 0.85em;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--text-dark);
+.cd-label {
+  margin-top: 10px;
+  font-family: "Courier New", monospace;
+  letter-spacing: 2px;
+  font-size: 0.95em;
+  color: var(--cd-muted);
+  text-transform: uppercase;
 }
 
-.flip-sep {
-    font-family: 'Courier New', monospace;
-    font-weight: 900;
-    font-size: 2.2em;
-    line-height: 1;
-    color: var(--dark-gold);
-    padding: 0 2px 18px;
-    user-select: none;
+.cd-card {
+  width: clamp(120px, 22vw, 170px);
+  height: clamp(90px, 15vw, 120px);
+  background: var(--cd-card);
+  border-radius: 10px;
+  box-shadow: 0 14px 30px var(--cd-shadow);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.06);
 }
 
-/* Singola cifra */
-.flip-digit {
-    position: relative;
-    width: 56px;
-    height: 76px;
-    perspective: 600px;
-    font-family: 'Courier New', monospace;
-    font-variant-numeric: tabular-nums;
+.cd-card::after{
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 50%;
+  height: 2px;
+  background: var(--cd-line);
+  transform: translateY(-1px);
+  border-radius: 2px;
 }
 
-/* Facce */
-.flip-digit .card {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 900;
-    font-size: 2.3em;
-    color: var(--dark-gold);
-    background: linear-gradient(135deg, var(--champagne-bg), var(--primary-gold));
-    box-shadow: 0 6px 18px var(--shadow-gold);
+/* top/bottom halves */
+.cd-half {
+  height: 50%;
+  overflow: hidden;
+  position: relative;
+  display: block;
 }
 
-.flip-digit .card.top {
-    top: 0;
-    border-radius: 12px 12px 0 0;
-    border-bottom: 1px solid rgba(90, 79, 71, 0.15);
+.cd-top { background: linear-gradient(to bottom, var(--cd-card-top), var(--cd-card)); }
+.cd-bottom { background: var(--cd-card); }
+
+/* numero: stesso testo in entrambe, “tagliato” a metà */
+.cd-num {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Courier New", monospace;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  color: var(--cd-text);
+  text-shadow: 0 2px 0 rgba(0,0,0,0.55);
+  font-size: clamp(48px, 9vw, 72px);
+  line-height: 1;
+  white-space: nowrap;
 }
 
-.flip-digit .card.bottom {
-    bottom: 0;
-    border-radius: 0 0 12px 12px;
+.cd-top .cd-num {
+  top: 100%;                 /* centro “virtuale” del box */
+  transform: translate(-50%, -50%);
 }
 
-/* Strato animato (si sovrappone durante il flip) */
-.flip-digit .card.flip-top,
-.flip-digit .card.flip-bottom {
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
+.cd-bottom .cd-num {
+  top: 0%;
+  transform: translate(-50%, -50%);
 }
 
-.flip-digit .card.flip-top {
-    top: 0;
-    transform-origin: bottom;
-    transform: rotateX(0deg);
-    z-index: 3;
+/* separatore tipo “:” */
+.cd-sep {
+  font-family: "Courier New", monospace;
+  font-weight: 900;
+  font-size: clamp(36px, 6vw, 52px);
+  color: rgba(255,255,255,0.35);
+  line-height: 1;
+  padding-top: 26px;
+  user-select: none;
 }
 
-.flip-digit .card.flip-bottom {
-    bottom: 0;
-    transform-origin: top;
-    transform: rotateX(180deg);
-    z-index: 2;
-}
-
-/* Linea centrale */
-.flip-digit::after {
-    content: "";
-    position: absolute;
-    left: 6px;
-    right: 6px;
-    top: 50%;
-    height: 2px;
-    background: rgba(90, 79, 71, 0.14);
-    transform: translateY(-1px);
-    border-radius: 10px;
-    z-index: 4;
-}
-
-/* Stato flip */
-.flip-digit.is-flipping .card.flip-top { animation: flipTop 600ms ease-in forwards; }
-.flip-digit.is-flipping .card.flip-bottom { animation: flipBottom 600ms ease-out forwards; }
-
-@keyframes flipTop {
-    0% { transform: rotateX(0deg); }
-    100% { transform: rotateX(-180deg); }
-}
-
-@keyframes flipBottom {
-    0% { transform: rotateX(180deg); }
-    100% { transform: rotateX(0deg); }
-}
-
-/* Responsive */
 @media (max-width: 768px) {
-    .names { position: static; margin-bottom: 25px; font-size: 2.2em; }
-    section { padding: 30px 20px; margin: 35px 15px; }
-
-    .flip-digit { width: 48px; height: 66px; }
-    .flip-digit .card { font-size: 2.0em; }
-    .flip-sep { font-size: 2.0em; padding-bottom: 16px; }
-    .data-evidenza { letter-spacing: 1px; }
-}
-
-@media (min-width: 1200px) {
-    .data-evidenza { font-size: 4.5em; letter-spacing: 4px; }
+  .names { position: static; margin-bottom: 25px; font-size: 2.2em; }
+  section { padding: 30px 20px; margin: 35px 15px; }
+  .countdown-dark { gap: 16px; }
+  .cd-unit { min-width: 140px; }
+  .cd-sep { display: none; } /* su mobile spesso meglio senza separatori */
 }
