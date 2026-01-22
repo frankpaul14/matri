@@ -6,15 +6,6 @@
   --shadow-gold: rgba(235,193,124,0.35);
   --dark-gold: #B8945F;
   --text-dark: #5A4F47;
-
-  /* Countdown dark (stile digitale) */
-  --cd-bg: #0f1418;
-  --cd-card: #1a2127;
-  --cd-card-top: #202a31;
-  --cd-line: rgba(255,255,255,0.10);
-  --cd-text: #f3f6f8;
-  --cd-muted: rgba(243,246,248,0.75);
-  --cd-shadow: rgba(0,0,0,0.45);
 }
 
 * { box-sizing: border-box; }
@@ -68,11 +59,30 @@ h1, h2 {
   font-weight: 700;
 }
 
-.invito {
-  max-width: 95vw;
-  padding: 30px 20px;
-  margin: 0 auto;
+/* Invito: se vuoi uguale alle altre sezioni, puoi anche cancellare questo blocco */
+.invito{
+  max-width: 800px;     /* uguale a section */
+  margin: 50px auto;    /* uguale a section */
+  padding: 40px;        /* uguale a section */
   overflow-wrap: break-word;
+}
+/* Prima frase dell’invito più grande */
+.invito > p:first-of-type {
+  font-size: clamp(1.15em, 2.2vw, 1.6em);
+  line-height: 1.45;
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+
+.invito .data-main {
+  font-size: clamp(1.3em, 2.6vw, 1.8em);
+  margin-bottom: 8px;
+}
+
+/* Giorno più piccolo */
+.invito .data-evidenza {
+  font-size: clamp(1.6em, 4.6vw, 2.8em);
+  letter-spacing: 1px;
 }
 
 /* Frase */
@@ -167,107 +177,8 @@ button:hover {
   box-shadow: 0 12px 35px var(--shadow-gold);
 }
 
-/* ===================== */
-/* COUNTDOWN DIGITALE DARK */
-/* ===================== */
-
-.countdown-dark {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 26px;
-  margin: 28px auto 8px;
-  flex-wrap: wrap;
-}
-
-.cd-unit {
-  text-align: center;
-  min-width: 120px;
-}
-
-.cd-label {
-  margin-top: 10px;
-  font-family: "Courier New", monospace;
-  letter-spacing: 2px;
-  font-size: 0.95em;
-  color: var(--cd-muted);
-  text-transform: uppercase;
-}
-
-.cd-card {
-  width: clamp(120px, 22vw, 170px);
-  height: clamp(90px, 15vw, 120px);
-  background: var(--cd-card);
-  border-radius: 10px;
-  box-shadow: 0 14px 30px var(--cd-shadow);
-  position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.06);
-}
-
-.cd-card::after{
-  content: "";
-  position: absolute;
-  left: 10px;
-  right: 10px;
-  top: 50%;
-  height: 2px;
-  background: var(--cd-line);
-  transform: translateY(-1px);
-  border-radius: 2px;
-}
-
-/* top/bottom halves */
-.cd-half {
-  height: 50%;
-  overflow: hidden;
-  position: relative;
-  display: block;
-}
-
-.cd-top { background: linear-gradient(to bottom, var(--cd-card-top), var(--cd-card)); }
-.cd-bottom { background: var(--cd-card); }
-
-/* numero: stesso testo in entrambe, “tagliato” a metà */
-.cd-num {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: "Courier New", monospace;
-  font-weight: 900;
-  font-variant-numeric: tabular-nums;
-  color: var(--cd-text);
-  text-shadow: 0 2px 0 rgba(0,0,0,0.55);
-  font-size: clamp(48px, 9vw, 72px);
-  line-height: 1;
-  white-space: nowrap;
-}
-
-.cd-top .cd-num {
-  top: 100%;                 /* centro “virtuale” del box */
-  transform: translate(-50%, -50%);
-}
-
-.cd-bottom .cd-num {
-  top: 0%;
-  transform: translate(-50%, -50%);
-}
-
-/* separatore tipo “:” */
-.cd-sep {
-  font-family: "Courier New", monospace;
-  font-weight: 900;
-  font-size: clamp(36px, 6vw, 52px);
-  color: rgba(255,255,255,0.35);
-  line-height: 1;
-  padding-top: 26px;
-  user-select: none;
-}
-
 @media (max-width: 768px) {
   .names { position: static; margin-bottom: 25px; font-size: 2.2em; }
   section { padding: 30px 20px; margin: 35px 15px; }
-  .countdown-dark { gap: 16px; }
-  .cd-unit { min-width: 140px; }
-  .cd-sep { display: none; } /* su mobile spesso meglio senza separatori */
+  .data-evidenza { letter-spacing: 1px; }
 }
