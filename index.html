@@ -8,14 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Password protection -->
-    <div id="password-overlay" class="overlay">
-        <div class="password-box">
-            <h2>Inserisci password invito</h2>
-            <input type="password" id="pass-input" placeholder="Password...">
-            <button onclick="checkPassword()">Entra</button>
-        </div>
-    </div>
+
 
     <!-- Header -->
     <header>
@@ -32,8 +25,35 @@
         <p class="data-evidenza">9 SETTEMBRE 2026</p>
     </div>
     <div id="countdown-container">
-        <div id="countdown">Caricamento...</div>
+    <!-- GIORNI (2 cifre) -->
+    <div class="flip-item">
+        <div class="flip-card tens" data-value="0"><div class="flip-top"></div><div class="flip-bottom">0</div></div>
+        <div class="flip-card units" data-value="0"><div class="flip-top"></div><div class="flip-bottom">0</div></div>
+        <span>giorni</span>
     </div>
+    <div class="flip-item">:</div>
+    <!-- ORE -->
+    <div class="flip-item">
+        <div class="flip-card tens" data-value="0"><div class="flip-top"></div><div class="flip-bottom">0</div></div>
+        <div class="flip-card units" data-value="0"><div class="flip-top"></div><div class="flip-bottom">0</div></div>
+        <span>ore</span>
+    </div>
+    <div class="flip-item">:</div>
+    <!-- MINUTI -->
+    <div class="flip-item">
+        <div class="flip-card tens" data-value="0"><div class="flip-top"></div><div class="flip-bottom">0</div></div>
+        <div class="flip-card units" data-value="0"><div class="flip-top"></div><div class="flip-bottom">0</div></div>
+        <span>min</span>
+    </div>
+    <div class="flip-item">:</div>
+    <!-- SECONDI -->
+    <div class="flip-item">
+        <div class="flip-card tens" data-value="0"><div class="flip-top"></div><div class="flip-bottom">0</div></div>
+        <div class="flip-card units" data-value="0"><div class="flip-top"></div><div class="flip-bottom">0</div></div>
+        <span>sec</span>
+    </div>
+</div>
+
     <p class="frase-effetto">"Vi aspettiamo per il nostro matrimonio, l'evento più importante della nostra vita"</p>
 </section>
 
