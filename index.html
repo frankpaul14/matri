@@ -6,6 +6,8 @@
     <title>Francesco & Chiara - Matrimonio 9 Settembre 2026</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
 </head>
 <body>
 
@@ -36,8 +38,9 @@ la gioia e l’emozione del nostro matrimonio."</p>
     <section class="luogo">
         <h2>La Chiesa</h2>
         <img src="images/chiesaMadre.jpg" alt="Chiesa">
-        <p><strong>Ore:</strong> 16:00</p> <!-- Cambia orario -->
-        <p><strong>Indirizzo:</strong> Via Chiesa 123, Catania [web:1]</p>
+        <p>Duomo di Augusta, Piazza Duomo, 16, 96011 Augusta SR</p>
+        <p><strong>Ore</strong> 16:00</p> <!-- Cambia orario -->
+       
         <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3146.105!2d15.2196319!3d37.2299357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1313c5a079e76727%3A0xaf90d38b91478a3b!2sDuomo%20di%20Augusta!5e0!3m2!1sit!2sit!4v1737560000000!5m2!1sit!2sit" 
             class="map" 
@@ -51,7 +54,7 @@ la gioia e l’emozione del nostro matrimonio."</p>
 <section class="luogo">
     <h2>Locale Ricevimento</h2>
     <img src="images/locale.png" alt="Capo Campolato Brucoli">
-    <p><strong>Indirizzo:</strong> Capo Campolato Hotel & Banqueting, Contrada Campolato, 96011 Brucoli SR</p>
+    <p>Capo Campolato Hotel & Banqueting, Contrada Campolato, 96011 Brucoli SR</p>
     <iframe 
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3159.845!2d15.21523!3d37.23782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13132f5a5f8b2d3f%3A0xabcdef1234567890!2sContrada%20Campolato%2C%2096011%20Brucoli%20SR!5e0!3m2!1sit!2sit!4v1737563200000!5m2!1sit!2sit" 
     class="map" 
@@ -64,12 +67,31 @@ la gioia e l’emozione del nostro matrimonio."</p>
 
     <!-- IBAN -->
     <section class="iban-section">
-        <h2>Ringraziamenti e Pensiero</h2>
-        <p>Grazie per essere parte della nostra gioia!</p>
+        <h2>Volete farci un regalo?</h2>  
+              <p>Non abbiamo previsto una lista nozze.Se desiderate farci un pensiero, un contributo ci permetterà di scegliere con calma ciò che ci piace davvero; ogni acquisto sarà un ricordo di voi.</p>
         <div class="iban-box">
-            <p><strong>IBAN per pensiero:</strong> IT60X0542811101000000123456</p> <!-- Il tuo IBAN -->
-            <small>Opzionale, per chi vuole contribuire</small>
+            <p><strong>Questo è il nosto IBAN:</strong> </p>
+       <div class="iban-row">
+  <p class="iban" id="ibanValue">IT60X0542811101000000123456</p>
+
+  <button type="button"
+          class="copy-iban-btn"
+          data-copy="#ibanValue"
+          aria-label="Copia IBAN">
+    <span class="material-symbols-outlined" aria-hidden="true">content_copy</span>
+  </button>
+</div>
+
+            <p>Intestatario: Francesco Vaccaro</p>
+            <p>Causale: Regalo Matrimonio</p> <!-- Il tuo IBAN -->
+            <p> Altrimenti </p>
+  <a class="paypal-btn" href="https://www.paypal.me/francescovaccaro14" target="_blank" rel="noopener">
+    <img src="images/paypalpng.png" alt="Regalo con PayPal">
+  </a>
+
         </div>
+
+    
     </section>
 
     <footer>

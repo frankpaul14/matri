@@ -137,6 +137,27 @@ h1, h2 {
   margin: 20px auto;
   display: block;
 }
+/* Titolo sezione (La Chiesa / Locale Ricevimento) più grande */
+section.luogo h2{
+  font-size: clamp(2.0em, 4vw, 2.8em);
+}
+
+/* Tutti i paragrafi (compresi Ore/Indirizzo) più grandi */
+section.luogo p{
+  font-size: clamp(1.2em, 2.2vw, 1.55em);
+  line-height: 1.35;
+}
+
+/* Titolo IBAN grande come “La Chiesa” */
+section.iban-section h2{
+  font-size: clamp(2.0em, 4vw, 2.8em);
+}
+
+/* Testi IBAN grandi come i p delle sezioni luogo */
+section.iban-section p{
+  font-size: clamp(1.2em, 2.2vw, 1.55em);
+  line-height: 1.35;
+}
 
 /* IBAN */
 .iban-box {
@@ -176,6 +197,70 @@ button:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 35px var(--shadow-gold);
 }
+.iban-box .paypal-btn{
+  display: inline-flex;         /* non a tutta larghezza */
+  justify-content: center;
+  align-items: center;
+  width: auto;                  /* prima 100% */
+  margin: 12px auto 0;
+  text-decoration: none;
+}
+
+/* Spazio sopra il bottone PayPal (opzionale ma aiuta) */
+.iban-box .paypal-btn img{
+  display: block;
+  width: clamp(120px, 36vw, 180px); /* regola la dimensione */
+  height: auto;                      /* mantiene proporzioni */
+}
+.iban-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* evita overflow dell’IBAN su mobile */
+.iban{
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* bottone icona trasparente */
+.copy-iban-btn{
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border-radius: 12px;
+  border: 2px solid var(--primary-gold);
+  background: transparent;
+  color: var(--primary-gold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform .15s ease, background .25s ease, color .25s ease, box-shadow .25s ease;
+}
+
+.copy-iban-btn:hover{ transform: translateY(-1px); }
+
+.copy-iban-btn .material-symbols-outlined{
+  font-size: 26px;
+  line-height: 1;
+}
+
+/* stato “copiato”: dorato */
+.copy-iban-btn.is-copied{
+  background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+  color: var(--white-pure);
+  box-shadow: 0 8px 25px var(--shadow-gold);
+}
+
+
+
 
 @media (max-width: 768px) {
   .names { position: static; margin-bottom: 25px; font-size: 2.2em; }
