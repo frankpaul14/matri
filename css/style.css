@@ -1,3 +1,4 @@
+
 :root {
   --primary-gold: #EBC17C;
   --champagne-bg: #F7E6CA;
@@ -10,6 +11,7 @@
 
 * { box-sizing: border-box; }
 
+
 body {
   font-family: 'Dancing Script', cursive;
   text-align: center;
@@ -20,6 +22,10 @@ body {
 }
 
 /* Header */
+header {
+  margin-top: 80px;
+  font-size: 22px;
+}
 .names {
   position: absolute;
   top: 20px;
@@ -75,14 +81,25 @@ h1, h2 {
 }
 
 .invito .data-main {
-  font-size: clamp(1.3em, 2.6vw, 1.8em);
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 8px;
+}
+
+.invito .data-clock {
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 8px;
+  color: var(--primary-gold);
 }
 
 /* Giorno più piccolo */
 .invito .data-evidenza {
   font-size: clamp(1.6em, 4.6vw, 2.8em);
   letter-spacing: 1px;
+  font-size: 35px;
+
+  
 }
 
 /* Frase */
@@ -139,13 +156,23 @@ h1, h2 {
 }
 /* Titolo sezione (La Chiesa / Locale Ricevimento) più grande */
 section.luogo h2{
-  font-size: clamp(2.0em, 4vw, 2.8em);
+  font-size: clamp(2.5em, 4vw, 2.8em);
 }
-
-/* Tutti i paragrafi (compresi Ore/Indirizzo) più grandi */
-section.luogo p{
-  font-size: clamp(1.2em, 2.2vw, 1.55em);
+a.outcontainer{
+  font-size: clamp(1.5em, 2.2vw, 1.55em);
   line-height: 1.35;
+  font-family: "Montserrat", sans-serif;
+}
+a.mangiare{
+  font-size: clamp(1.0em, 2.2vw, 1.55em);
+  line-height: 1.35;
+  font-family: "Montserrat", sans-serif;
+}
+/* Tutti i paragrafi (compresi Ore/Indirizzo) più grandi */
+section.luogo  a[href]{
+  font-size: clamp(1.0em, 2.2vw, 1.55em);
+  line-height: 1.35;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Titolo IBAN grande come “La Chiesa” */
@@ -204,6 +231,11 @@ button:hover {
   width: auto;                  /* prima 100% */
   margin: 12px auto 0;
   text-decoration: none;
+}
+section.iban-section p.intestazione{
+  font-size: clamp(1.0em, 2.2vw, 1.55em);
+  line-height: 1.35;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Spazio sopra il bottone PayPal (opzionale ma aiuta) */
