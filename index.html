@@ -36,9 +36,9 @@ body {
   transform: scale(1);
 }
 
-header{margin-top:80px;font-size:22px;}
-.names{position:absolute;top:20px;left:20px;font-size:2.5em;color:var(--primary-gold);margin:0;text-shadow:1px 1px 3px var(--shadow-gold);}
-.hero-photo{width:350px;height:350px;aspect-ratio:1/1;object-fit:cover;object-position:center;border-radius:50%;border:8px solid var(--primary-gold);box-shadow:0 20px 45px var(--shadow-gold);margin:120px auto 40px;display:block;}
+header{margin-top:80px;font-size:22px;flex-direction: column; display: flex; align-items: center}
+.names{font-size:2.5em;color:var(--primary-gold);margin:0;text-shadow:1px 1px 3px var(--shadow-gold);}
+.hero-photo{width:350px;height:350px;aspect-ratio:1/1;object-fit:cover;object-position:center;border-radius:50%;border:8px solid var(--primary-gold);box-shadow:0 20px 45px var(--shadow-gold);margin:40px auto 40px;display:block;}
 section{margin:50px auto;padding:40px;background:var(--white-pure);border-radius:25px;box-shadow:0 10px 30px var(--shadow-gold);max-width:800px;border-left:6px solid var(--primary-gold);}
 h1,h2{color:var(--primary-gold);font-weight:700;}
 .invito{max-width:800px;margin:50px auto;padding:40px;overflow-wrap:break-word;}
@@ -85,12 +85,15 @@ section.iban-section p.intestazione{font-size:clamp(1.0em,2.2vw,1.55em);line-hei
   display: flex;
   align-items: center;
   justify-content: center;
-  /* transizione scivola in alto */
-  transition: transform 0.75s cubic-bezier(0.4, 0, 0.6, 1),
-              opacity   0.6s ease;
+
+  /* CAMBIATO: Transizione ottimizzata per lo scale */
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+  opacity 0.7s ease;
 }
+
 #envelope-overlay.dismiss {
-  transform: translateY(-100%);
+  /* CAMBIATO: Invece di translateY, usiamo scale */
+  transform: scale(2); /* Ingrandisce la busta come se venisse verso l'utente */
   opacity: 0;
   pointer-events: none;
 }
@@ -198,8 +201,12 @@ section.iban-section p.intestazione{font-size:clamp(1.0em,2.2vw,1.55em);line-hei
 <!-- SITO SOTTO — sfocato all'inizio -->
 <div id="site-content">
   <header>
-    <h1 class="names">Francesco e Chiara</h1>
-    <img src="images/frachia.jpg" alt="Francesco e Chiara" class="hero-photo">
+    <div>
+      <h1 class="names">Francesco e Chiara</h1>
+    </div>
+    <div>
+      <img src="images/frachia.jpg" alt="Francesco e Chiara" class="hero-photo">
+    </div>
   </header>
   <section class="invito">
     <p style="font-size:35px;">Con immensa gioia annunciamo il nostro matrimonio!</p>
